@@ -1,11 +1,11 @@
 .navbar {
-    background-color: #5C6BC0;
+    background-color: #FF7043;
     webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
     text-shadow: 1px 1px #000;
 }
 body {
-    background-image: url("../images/bg.jpeg");
+    background-image: url("../images/bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
