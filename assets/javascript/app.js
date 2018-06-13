@@ -27,7 +27,7 @@ $("#addmovie").on("click", function(event) {
 renderButtons();
 
 // When clicking any button, use the api to create divs and append it to the page
-$("button").on("click", function() {
+function displayGif() {
     // Empty div first
     $("#gifs").empty();
     var moviename = $(this).attr("data-name");
@@ -40,6 +40,7 @@ $("button").on("click", function() {
         })
         .then(function(response) {
             var results = response.data;
+            // Create divs and attach movies to it
             for (var i = 0; i < results.length; i++) {
                 var movieDiv = $("<div>");
                 movieDiv.addClass("movieDiv");
@@ -54,6 +55,7 @@ $("button").on("click", function() {
                 movieDiv.append(p);
                 $("#gifs").prepend(movieDiv);
             }
+            // On click event to change the state of the gif
             $(".gif").on("click", function() {
                 var state = $(this).attr("data-state");
                 console.log(state);
@@ -66,4 +68,7 @@ $("button").on("click", function() {
                 }
             });
         });
-});
+};
+
+// Add click event to all buttons
+$(document).on("click", "button", displayGif);
