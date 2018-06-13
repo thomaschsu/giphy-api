@@ -36,33 +36,33 @@ $("button").on("click", function() {
     // Performing ajax request
     $.ajax({
             url: queryURL,
-            method: "GET"
+            method: "GET",
         })
         .then(function(response) {
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
                 var movieDiv = $("<div>");
                 movieDiv.addClass("movieDiv");
-                var p = $("<p>").text("Rating: " + results[i].rating);
+                var p = $("<p>").text("Rating: " + results[i].rating.toUpperCase());
                 var movieImage = $("<img>");
                 movieImage.attr("src", results[i].images.fixed_height_still.url);
                 movieImage.attr("data-still", results[i].images.fixed_height_still.url);
                 movieImage.attr("data-animate", results[i].images.fixed_height.url);
                 movieImage.attr("data-state", "still");
                 movieImage.addClass("gif");
-                movieDiv.append(p);
                 movieDiv.append(movieImage);
+                movieDiv.append(p);
                 $("#gifs").prepend(movieDiv);
             }
             $(".gif").on("click", function() {
                 var state = $(this).attr("data-state");
                 console.log(state);
                 if (state === "still") {
-                  $(this).attr("src", $(this).attr("data-animate"));
-                  $(this).attr("data-state", "animate");
+                    $(this).attr("src", $(this).attr("data-animate"));
+                    $(this).attr("data-state", "animate");
                 } else {
-                  $(this).attr("src", $(this).attr("data-still"));
-                  $(this).attr("data-state", "still");
+                    $(this).attr("src", $(this).attr("data-still"));
+                    $(this).attr("data-state", "still");
                 }
             });
         });
