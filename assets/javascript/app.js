@@ -24,7 +24,7 @@ $("#addmovie").on("click", function(event) {
 });
 
 // Starts renderbuttons function
-renderButtons()
+renderButtons();
 
 // When clicking any button, use the api to create divs and append it to the page
 $("button").on("click", function() {
