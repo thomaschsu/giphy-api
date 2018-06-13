@@ -24,7 +24,7 @@ body {
 .footer {
     min-height: calc(65vh - 70px);
 }
-#addmovie {
+#addmovie, #requestmovie {
     text-align: center;
     background-color: #546E7A;
     border: 1px solid #CFD8DC;
@@ -35,7 +35,7 @@ body {
     margin-top: 10px;
     text-transform: uppercase;
 }
-#addmovie:hover {
+#addmovie:hover, #requestmovie:hover {
     background-color: #90A4AE;
 }
 input {
