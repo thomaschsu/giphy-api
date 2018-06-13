@@ -42,6 +42,7 @@ $("button").on("click", function() {
             var results = response.data;
             for (var i = 0; i < results.length; i++) {
                 var movieDiv = $("<div>");
+                movieDiv.addClass("movieDiv");
                 var p = $("<p>").text("Rating: " + results[i].rating);
                 var movieImage = $("<img>");
                 movieImage.attr("src", results[i].images.fixed_height_still.url);
