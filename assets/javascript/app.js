@@ -1,16 +1,16 @@
 // Array of Movies
-var movies = ["The Raid 2", "Interstellar", "IT", "The Shining", "Princess Mononoke", "The Dark Knight", "Pulp Fiction"];
+var topics = ["The Raid 2", "Interstellar", "IT", "The Shining", "Princess Mononoke", "The Dark Knight", "Pulp Fiction"];
 
 // Render the buttons function
 function renderButtons() {
     // Empty the div
     $("#movies-area").empty();
     // Create buttons for all the movies in the movies array
-    for (var i = 0; i < movies.length; i++) {
+    for (var i = 0; i < topics.length; i++) {
         var button = $("<button>");
         button.addClass("movie");
-        button.attr("data-name", movies[i]);
-        button.text(movies[i]);
+        button.attr("data-name", topics[i]);
+        button.text(topics[i]);
         $("#movies-area").append(button);
     }
 }
@@ -19,7 +19,7 @@ function renderButtons() {
 $("#addmovie").on("click", function(event) {
     event.preventDefault();
     var movie = $("#movie-input").val().trim();
-    movies.push(movie);
+    topics.push(movie);
     renderButtons();
 });
 
@@ -58,7 +58,6 @@ function displayGif() {
             // On click event to change the state of the gif
             $(".gif").on("click", function() {
                 var state = $(this).attr("data-state");
-                console.log(state);
                 if (state === "still") {
                     $(this).attr("src", $(this).attr("data-animate"));
                     $(this).attr("data-state", "animate");
