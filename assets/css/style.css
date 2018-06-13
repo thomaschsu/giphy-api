@@ -24,56 +24,30 @@ body {
 .footer {
     min-height: calc(65vh - 70px);
 }
-#start {
+#addmovie {
     text-align: center;
     background-color: #546E7A;
     border: 1px solid #CFD8DC;
     padding: 10px 15px;
     webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
     text-shadow: 1px 1px #000;
+    color: #FFF;
 }
-#start:hover {
+#addmovie:hover {
     background-color: #90A4AE;
 }
 input {
-    margin: 0 5px;
-}
-#timer {
-    margin: 20px auto;
-    background-color: #EF5350;
-    padding: 10px 0;
-    text-align: center;
-    color: #fff;
-    webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
-    text-shadow: 1px 1px #000;
+    /* margin: 0 5px; */
 }
 button {
     padding: 10px 15px;
     background-color: #29B6F6;
     color: #FFF;
     border: none;
+    margin: 15px 10px;
 }
 #instructions {
     padding: 15px 10px;
     font-size: 20px;
     margin-bottom: 20px;
-}
-#question1,
-#question2,
-#question3,
-#question4,
-#question5,
-#question6,
-#question7,
-#question8,
-#answer1,
-#answer2,
-#answer3,
-#answer4,
-#answer5,
-#answer6,
-#answer7,
-#answer8 {
-    margin: 20px 0;
 }

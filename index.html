@@ -2,7 +2,7 @@
 <html lang="en-us">
    <head>
       <meta charset="UTF-8">
-      <title>Giphy API</title>
+      <title>Giphy API - Movies</title>
       <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -11,18 +11,18 @@
       <div class="body-container">
          <nav class="navbar sticky-top">
             <div class="container">
-               <span class="navbar-brand mb-0 h1 text-white">Giphy API</span>
+               <span class="navbar-brand mb-0 h1 text-white">Giphy API - Movies</span>
             </div>
          </nav>
          <div class="container jumbotron mt-5">
-            <div id="buttons"></div>
-            <button id="start">
-               <h2>Start Game</h2>
-            </button>
-            <button id="end">
-                <h2>End Game</h2>
-            </button>
-            <div id="results"></div>
+            <div id="movies-area"></div>
+            <div id="gifs"></div>
+            <div id="instructions">Type a movie into the text box and hit the submit button to add a button to this page! Click on the buttons above to show GIF's of the selected movie.</div>
+            <form id="movie-form">
+               <label for="movie-input">Add a Movie</label>
+               <input type="text" id="movie-input"><br>
+               <input id="addmovie" type="submit" value="submit">
+            </form>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="assets/javascript/app.js"></script>
          </div>
