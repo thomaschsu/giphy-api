@@ -44,7 +44,7 @@ function displayGif() {
             for (var i = 0; i < results.length; i++) {
                 var movieDiv = $("<div>");
                 movieDiv.addClass("movieDiv");
-                var p = $("<p>").text("Rating: " + results[i].rating.toUpperCase());
+                var p = $("<p>").html("<b>Rating: </b>" + results[i].rating.toUpperCase() + " <b>Title:</b> " + results[i].title + " <b>Source:</b> " + "<a href='" + results[i].source + "'>" + results[i].source + "</a>");
                 var movieImage = $("<img>");
                 movieImage.attr("src", results[i].images.fixed_height_still.url);
                 movieImage.attr("data-still", results[i].images.fixed_height_still.url);
